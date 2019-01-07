@@ -1,0 +1,14 @@
+#version 120
+
+attribute vec4 vertex;
+
+attribute vec2 texCoord;
+
+varying vec2 tx_coord;
+
+void main()
+{
+
+  gl_Position = gl_ModelViewProjectionMatrix * vertex;
+  tx_coord = texCoord;
+}

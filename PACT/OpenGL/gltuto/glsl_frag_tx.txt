@@ -1,0 +1,20 @@
+//precision mediump float;
+
+#define M_PI 3.1415926535897932384626433832795
+
+uniform sampler2D texture;
+
+uniform float width;
+uniform float height;
+
+varying vec2 tx_coord;
+
+void main()
+{
+	vec4 res;
+	res = texture2D(texture, tx_coord);
+
+	gl_FragColor = res;
+}
+
+
